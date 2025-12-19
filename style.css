@@ -68,6 +68,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        border-bottom: 5px solid #2B4162;
     }
 
     .container {
