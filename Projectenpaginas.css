@@ -114,6 +114,25 @@
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
+.project-images-single img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(43, 65, 98, 0.15);
+    transition: all 0.3s ease;
+}
+
+.project-images-single img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.disclaimer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
 
 
 @media (max-width: 1200px) {
