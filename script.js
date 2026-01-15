@@ -6,9 +6,21 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-document.querySelectorAll('nav a').forEach(link => {
+// Close menu when clicking on a link
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
     });
+});
+
+document.addEventListener('click', (event) => {
+    const isClickInsideNav = navMenu.contains(event.target);
+    const isClickOnHamburger = hamburger.contains(event.target);
+
+    if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
 });
